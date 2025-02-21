@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function AfDDoomsdayClock() {
   const [percentage, setPercentage] = useState(20);
+
+  useEffect(() => {
+    document.title = "German Doomsday Clock"; // Sets the browser tab title
+  }, []);
 
   const getTimeAndMessage = (percent) => {
     if (percent >= 43.9) return { time: "12:00 AM", message: "🔥 Hitler O'Clock: Democracy collapses!" };
@@ -21,8 +25,11 @@ export default function AfDDoomsdayClock() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
-      <h1 className="text-4xl font-bold mb-4">AfD Doomsday Clock</h1>
-      <label className="block text-left font-semibold">Vote Percentage:</label>
+      {/* Updated Page Title */}
+      <h1 className="text-4xl font-bold mb-4">German Doomsday Clock</h1>
+      
+      {/* Updated Input Label */}
+      <label className="block text-left font-semibold">AfD Vote Percentage:</label>
       <input
         type="number"
         value={percentage}
@@ -47,7 +54,7 @@ export default function AfDDoomsdayClock() {
 
       {/* Context Commentary (More Separation) */}
       <footer className="mt-6 text-center p-4 text-gray-400 text-sm max-w-md mx-auto leading-relaxed">
-        <p className="text-gray-300 font-semibold text-lg">Context</p>
+        <p className="text-gray-300 font-semibold text-lg">Historical Context</p>
         <p className="mt-2">
           In 1933, the Nazi Party secured <strong>43.9% of the vote</strong>, allowing Hitler to consolidate power 
           and dismantle democracy. No single moment marks the fall of a system, but thresholds matter.
