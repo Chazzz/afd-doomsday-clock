@@ -2,7 +2,7 @@
   "name": "afd-doomsday-clock",
   "version": "1.0.0",
   "private": false,
-  "homepage": "https://your-github-username.github.io/afd-doomsday-clock",
+  "homepage": "https://chazzz.github.io/afd-doomsday-clock",
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
