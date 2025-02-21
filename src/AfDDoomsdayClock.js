@@ -22,7 +22,6 @@ export default function AfDDoomsdayClock() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-4xl font-bold mb-4">AfD Doomsday Clock</h1>
-      <label className="block text-left font-semibold">Vote Percentage:</label>
       <input
         type="number"
         value={percentage}
@@ -36,12 +35,28 @@ export default function AfDDoomsdayClock() {
         animate={{ rotate: [0, 10, -10, 0] }}
         transition={{ duration: 0.5 }}
       >
-        The time is: 🕰 {time}
+        🕰 {time}
       </motion.div>
       <div className="mt-4 w-96 text-center p-4 bg-gray-800 border border-gray-700">
         <p className="text-lg">{message}</p>
-
       </div>
+
+      {/* Context Commentary */}
+      <footer className="mt-6 w-96 text-center p-4 text-gray-400 text-sm">
+        <p>
+          In 1933, the Nazi Party secured **43.9% of the vote**, allowing Hitler to consolidate power 
+          and dismantle democracy. No single moment marks the fall of a system, but thresholds matter.
+        </p>
+        <p className="mt-2">
+          Today, with the rise of the far-right party AfD, history reminds us that democracy is rarely lost overnight—it erodes, 
+          vote by vote, policy by policy. The trajectory of political extremism often follows patterns of normalization, 
+          coalition-building, and legal maneuvering.
+        </p>
+        <p className="mt-2">
+          This clock tracks the potential tipping points in electoral support.
+          The question remains: how close to midnight does democracy have to get before the alarms go off?
+        </p>
+      </footer>
     </div>
   );
 }
