@@ -45,21 +45,38 @@ export default function AfDDoomsdayClock() {
         />
       </div>
 
-      {/* Animated Analog Clock */}
+      {/* Analog Clock with Correct Rotation */}
       <div className="relative mt-6 w-40 h-40 flex items-center justify-center bg-gray-800 rounded-full border-4 border-gray-700">
-        {/* Clock Hands */}
+        {/* Hour Hand */}
         <motion.div
-          className="absolute w-1 h-16 bg-white origin-bottom"
-          style={{ transform: `rotate(${hourRotation}deg)` }}
+          className="absolute bg-white"
+          style={{
+            width: "4px",
+            height: "30%",
+            bottom: "50%",
+            left: "calc(50% - 2px)",
+            transformOrigin: "bottom center",
+            transform: `rotate(${hourRotation}deg)`,
+          }}
           animate={{ rotate: hourRotation }}
           transition={{ duration: 0.5 }}
         />
+
+        {/* Minute Hand */}
         <motion.div
-          className="absolute w-1 h-20 bg-red-500 origin-bottom"
-          style={{ transform: `rotate(${minuteRotation}deg)` }}
+          className="absolute bg-red-500"
+          style={{
+            width: "3px",
+            height: "40%",
+            bottom: "50%",
+            left: "calc(50% - 1.5px)",
+            transformOrigin: "bottom center",
+            transform: `rotate(${minuteRotation}deg)`,
+          }}
           animate={{ rotate: minuteRotation }}
           transition={{ duration: 0.5 }}
         />
+
         {/* Clock Center Dot */}
         <div className="absolute w-4 h-4 bg-white rounded-full" />
       </div>
