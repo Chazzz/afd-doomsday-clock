@@ -36,7 +36,7 @@ export default function AfDDoomsdayClock() {
         animate={{ rotate: [0, 10, -10, 0] }}
         transition={{ duration: 0.5 }}
       >
-        🕰 {time}
+        The time is: 🕰 {time}
       </motion.div>
       <div className="mt-4 w-96 text-center p-4 bg-gray-800 border border-gray-700">
         <p className="text-lg">{message}</p>
