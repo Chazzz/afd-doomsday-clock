@@ -5,7 +5,7 @@ export default function AfDDoomsdayClock() {
   const [percentage, setPercentage] = useState(20);
 
   useEffect(() => {
-    document.title = "German Doomsday Clock"; // Sets the browser tab title
+    document.title = "German Doomsday Clock";
   }, []);
 
   const getTimeAndMessage = (percent) => {
@@ -25,10 +25,8 @@ export default function AfDDoomsdayClock() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
-      {/* Updated Page Title */}
       <h1 className="text-4xl font-bold mb-4">German Doomsday Clock</h1>
-      
-      {/* Updated Input Label */}
+
       <label className="block text-left font-semibold">AfD Vote Percentage:</label>
       <input
         type="number"
@@ -38,6 +36,7 @@ export default function AfDDoomsdayClock() {
         min="0"
         max="50"
       />
+
       <motion.div
         className="mt-6 text-6xl font-bold"
         animate={{ rotate: [0, 10, -10, 0] }}
@@ -45,28 +44,28 @@ export default function AfDDoomsdayClock() {
       >
         The time is 🕰 {time}
       </motion.div>
+
       <div className="mt-4 w-96 text-center p-4 bg-gray-800 border border-gray-700">
         <p className="text-lg">{message}</p>
       </div>
 
-      {/* Divider for Separation */}
       <div className="mt-8 w-full max-w-md border-t border-gray-600 opacity-50"></div>
 
-      {/* Context Commentary (Width Properly Restricted) */}
-      <footer className="mt-6 text-center p-4 text-gray-400 text-sm">
-        <p className="text-gray-300 font-semibold text-lg">Historical Context</p>
-        <p className="mt-2 max-w-sm mx-auto">
+      {/* Restrict the width of paragraphs here */}
+      <footer className="mt-6 text-gray-400 text-sm mx-auto max-w-[70ch]">
+        <p className="text-gray-300 font-semibold text-lg text-center">Historical Context</p>
+        <p className="mt-2">
           In 1933, the Nazi Party secured <strong>43.9% of the vote</strong>, allowing Hitler to consolidate power 
           and dismantle democracy. No single moment marks the fall of a system, but thresholds matter.
         </p>
-        <p className="mt-4 max-w-sm mx-auto">
-          Today, with the rise of the far-right party AfD, history reminds us that democracy is rarely lost overnight—it erodes, 
-          vote by vote, policy by policy. The trajectory of political extremism often follows patterns of normalization, 
-          coalition-building, and legal maneuvering.
+        <p className="mt-4">
+          Today, with the rise of the far-right party AfD, history reminds us that democracy is rarely lost 
+          overnight—it erodes, vote by vote, policy by policy. The trajectory of political extremism often follows 
+          patterns of normalization, coalition-building, and legal maneuvering.
         </p>
-        <p className="mt-4 max-w-sm mx-auto">
-          This clock tracks the potential tipping points in electoral support.
-          The question remains: how close to midnight does democracy have to get before the alarms go off?
+        <p className="mt-4">
+          This clock tracks the potential tipping points in electoral support. The question remains: how close to 
+          midnight does democracy have to get before the alarms go off?
         </p>
       </footer>
     </div>
