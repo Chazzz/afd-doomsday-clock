@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/afd-doomsday-clock/static/css/main.246b042a.css",
-    "main.js": "/afd-doomsday-clock/static/js/main.406e36e0.js",
+    "main.css": "/afd-doomsday-clock/static/css/main.343c3d4e.css",
+    "main.js": "/afd-doomsday-clock/static/js/main.efdac353.js",
     "index.html": "/afd-doomsday-clock/index.html",
-    "main.246b042a.css.map": "/afd-doomsday-clock/static/css/main.246b042a.css.map",
-    "main.406e36e0.js.map": "/afd-doomsday-clock/static/js/main.406e36e0.js.map"
+    "main.343c3d4e.css.map": "/afd-doomsday-clock/static/css/main.343c3d4e.css.map",
+    "main.efdac353.js.map": "/afd-doomsday-clock/static/js/main.efdac353.js.map"
   },
   "entrypoints": [
-    "static/css/main.246b042a.css",
-    "static/js/main.406e36e0.js"
+    "static/css/main.343c3d4e.css",
+    "static/js/main.efdac353.js"
   ]
 }
