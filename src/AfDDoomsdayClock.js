@@ -20,26 +20,26 @@ export default function AfDDoomsdayClock() {
   const { time, message } = getTimeAndMessage(percentage);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-900 p-6">
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-md text-center">
-        <h1 className="text-2xl font-bold text-blue-600 mb-4">AfD Doomsday Clock</h1>
-        <label className="block text-left font-semibold">Vote Percentage:</label>
-        <input
-          type="number"
-          value={percentage}
-          onChange={(e) => setPercentage(Number(e.target.value))}
-          className="w-full p-2 border border-gray-300 rounded mt-2"
-          min="0"
-          max="50"
-        />
-        <motion.div
-          className="mt-6 text-4xl font-bold text-gray-700"
-          animate={{ rotate: [0, 10, -10, 0] }}
-          transition={{ duration: 0.5 }}
-        >
-          🕰 {time}
-        </motion.div>
-        <p className="mt-4 text-lg font-semibold text-gray-600">{message}</p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
+      <h1 className="text-4xl font-bold mb-4">AfD Doomsday Clock</h1>
+      <input
+        type="number"
+        value={percentage}
+        onChange={(e) => setPercentage(Number(e.target.value))}
+        className="text-black p-2 rounded-lg"
+        min="0"
+        max="50"
+      />
+      <motion.div
+        className="mt-6 text-6xl font-bold"
+        animate={{ rotate: [0, 10, -10, 0] }}
+        transition={{ duration: 0.5 }}
+      >
+        🕰 {time}
+      </motion.div>
+      <div className="mt-4 w-96 text-center p-4 bg-gray-800 border border-gray-700">
+        <p className="text-lg">{message}</p>
+
       </div>
     </div>
   );
