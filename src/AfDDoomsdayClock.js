@@ -42,10 +42,10 @@ export default function AfDDoomsdayClock() {
         <p className="text-lg">{message}</p>
       </div>
 
-      {/* Context Commentary */}
-      <footer className="mt-6 w-96 text-center p-4 text-gray-400 text-sm">
-        <p>
-          In 1933, the Nazi Party secured **43.9% of the vote**, allowing Hitler to consolidate power 
+      {/* Context Commentary (Now with Proper Width Constraints) */}
+      <footer className="mt-6 text-center p-4 text-gray-400 text-sm max-w-md mx-auto">
+        <p className="mt-2">
+          In 1933, the Nazi Party secured <strong>43.9% of the vote</strong>, allowing Hitler to consolidate power 
           and dismantle democracy. No single moment marks the fall of a system, but thresholds matter.
         </p>
         <p className="mt-2">
