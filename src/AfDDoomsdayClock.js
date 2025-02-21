@@ -22,6 +22,7 @@ export default function AfDDoomsdayClock() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-4xl font-bold mb-4">AfD Doomsday Clock</h1>
+      <label className="block text-left font-semibold">Vote Percentage:</label>
       <input
         type="number"
         value={percentage}
@@ -35,7 +36,7 @@ export default function AfDDoomsdayClock() {
         animate={{ rotate: [0, 10, -10, 0] }}
         transition={{ duration: 0.5 }}
       >
-        🕰 {time}
+        Thu time is 🕰 {time}
       </motion.div>
       <div className="mt-4 w-96 text-center p-4 bg-gray-800 border border-gray-700">
         <p className="text-lg">{message}</p>
