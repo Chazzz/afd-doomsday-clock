@@ -27,15 +27,17 @@ export default function AfDDoomsdayClock() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white p-6">
       <h1 className="text-4xl font-bold mb-4">German Doomsday Clock</h1>
 
-      <label className="block text-left font-semibold">AfD Vote Percentage:</label>
-      <input
-        type="number"
-        value={percentage}
-        onChange={(e) => setPercentage(Number(e.target.value))}
-        className="text-black p-2 rounded-lg"
-        min="0"
-        max="50"
-      />
+      <div className="flex items-center gap-2">
+        <label className="font-semibold">AfD Vote Percentage:</label>
+        <input
+          type="number"
+          value={percentage}
+          onChange={(e) => setPercentage(Number(e.target.value))}
+          className="text-black p-2 rounded-lg w-20"
+          min="0"
+          max="50"
+        />
+      </div>
 
       <motion.div
         className="mt-6 text-6xl font-bold"
