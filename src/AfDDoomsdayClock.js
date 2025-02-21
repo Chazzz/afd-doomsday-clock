@@ -42,18 +42,22 @@ export default function AfDDoomsdayClock() {
         <p className="text-lg">{message}</p>
       </div>
 
-      {/* Context Commentary (Now with Proper Width Constraints) */}
-      <footer className="mt-6 text-center p-4 text-gray-400 text-sm max-w-md mx-auto">
+      {/* Divider for Separation */}
+      <div className="mt-8 w-full max-w-md border-t border-gray-600 opacity-50"></div>
+
+      {/* Context Commentary (More Separation) */}
+      <footer className="mt-6 text-center p-4 text-gray-400 text-sm max-w-md mx-auto leading-relaxed">
+        <p className="text-gray-300 font-semibold text-lg">Context</p>
         <p className="mt-2">
           In 1933, the Nazi Party secured <strong>43.9% of the vote</strong>, allowing Hitler to consolidate power 
           and dismantle democracy. No single moment marks the fall of a system, but thresholds matter.
         </p>
-        <p className="mt-2">
+        <p className="mt-4">
           Today, with the rise of the far-right party AfD, history reminds us that democracy is rarely lost overnight—it erodes, 
           vote by vote, policy by policy. The trajectory of political extremism often follows patterns of normalization, 
           coalition-building, and legal maneuvering.
         </p>
-        <p className="mt-2">
+        <p className="mt-4">
           This clock tracks the potential tipping points in electoral support.
           The question remains: how close to midnight does democracy have to get before the alarms go off?
         </p>
