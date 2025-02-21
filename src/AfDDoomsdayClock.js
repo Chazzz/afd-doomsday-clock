@@ -45,16 +45,30 @@ export default function AfDDoomsdayClock() {
         />
       </div>
 
-      {/* Analog Clock with Correct Rotation */}
+      {/* Analog Clock with Correct Rotation and Enhanced Hour Hand */}
       <div className="relative mt-6 w-40 h-40 flex items-center justify-center bg-gray-800 rounded-full border-4 border-gray-700">
-        {/* Hour Hand */}
+        {/* Hour Hand (Thicker + Small Protrusion) */}
         <motion.div
           className="absolute bg-white"
           style={{
-            width: "4px",
+            width: "6px",
             height: "30%",
             bottom: "50%",
-            left: "calc(50% - 2px)",
+            left: "calc(50% - 3px)",
+            transformOrigin: "bottom center",
+            transform: `rotate(${hourRotation}deg)`,
+          }}
+          animate={{ rotate: hourRotation }}
+          transition={{ duration: 0.5 }}
+        />
+        {/* Hour Hand Tip Protrusion */}
+        <motion.div
+          className="absolute bg-white rounded-full"
+          style={{
+            width: "8px",
+            height: "8px",
+            bottom: "80%",
+            left: "calc(50% - 4px)",
             transformOrigin: "bottom center",
             transform: `rotate(${hourRotation}deg)`,
           }}
@@ -62,7 +76,7 @@ export default function AfDDoomsdayClock() {
           transition={{ duration: 0.5 }}
         />
 
-        {/* Minute Hand */}
+        {/* Minute Hand (Thinner and Longer) */}
         <motion.div
           className="absolute bg-red-500"
           style={{
